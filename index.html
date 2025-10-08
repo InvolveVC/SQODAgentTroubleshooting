@@ -16,6 +16,7 @@
 .card { min-height: 70vh; padding: 50px 32px 80px; }
 .card.dynamic { min-height: auto; height: auto; padding: 84px 50px 120px; }
 .card.dynamic .answer-text { max-width: 860px; margin: 0 auto; line-height: 1.7; }
+.note-small{ color:var(--pink); font-style:italic; font-size:1.1rem; font-weight:400; display:block; margintop:6px; }
 </style>
 </head>
 <body>
@@ -31,7 +32,7 @@
 
 <script>
 const SLIDES = {
-  "W1": {type:"q", text:`"Welcome to SQOD's interactive troubleshooting guide for Agents and Clinicians."`, buttons:[{label:"Continue", next:"W2"}]},
+  "W1": {type:"q", text:`Welcome to SQOD's interactive troubleshooting guide for Agents and Clinicians.<br><span class="note-small">Please click below to continue.</span>`, buttons:[{label:"Continue", next:"W2"}]},
   "W2": {type:"q", text:`"Who is experiencing the issue?"`, buttons:[{label:"Me", next:"C1"}, {label:"The client", next:"P1"}]},
   "P1": {type:"q", text:`"Has the client successfully joined the video consultation?"`, buttons:[{label:"Yes", next:"P2"}, {label:"No", next:"P1AA"}]},
   "P1A": {type:"q", text:`"Is the client showing as "Waiting to be seen" on your SQOD webpage?"`, buttons:[{label:"Yes", next:"P1AA"}, {label:"No", next:"P1AAAA"}]},
